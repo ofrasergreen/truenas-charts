@@ -30,7 +30,7 @@ spec:
               containerPort: 8447
               hostPort: 8447
           ports:
-            - name: chia-daemon
+            - name: chia-harvester
               protocol: TCP
               containerPort: 55400
               hostPort: 55400
