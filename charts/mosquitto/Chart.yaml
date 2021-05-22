@@ -1,0 +1,27 @@
+apiVersion: v2
+kubeVersion: ">=1.16.0-0"
+name: mosquitto
+version: 1.0.0
+# upstream_version:
+appVersion: "auto"
+description: "Eclipse Mosquitto is an open source message broker which implements MQTT version 5, 3.1.1 and 3.1"
+type: application
+deprecated: false
+home: https://mosquitto.org/
+icon: https://d1q6f0aelx0por.cloudfront.net/product-logos/library-eclipse-mosquitto-logo.png
+keywords:
+  - mosquitto
+  - mqtt
+sources:
+  - https://github.com/eclipse/mosquitto
+  - https://hub.docker.com/_/eclipse-mosquitto
+dependencies:
+  - name: common
+    repository: https://truecharts.org/
+    version: 3.5.8
+    # condition:
+maintainers:
+  - name: Owen Fraser-Green
+    email: owen@fraser-green.com
+    url: fraser-green.com
+# annotations:
