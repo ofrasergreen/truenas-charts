@@ -1,4 +1,4 @@
-# Default values for Transmission.
+# Default values for Mosquitto.
 
 image:
   repository: eclipse-mosquitto
