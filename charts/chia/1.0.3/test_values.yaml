@@ -14,3 +14,6 @@ appVolumeMounts:
   data:
     emptyDir: true
     mountPath: "/root/.chia"
+  tmp:
+    emptyDir: true
+    mountPath: "/plot-tmp"

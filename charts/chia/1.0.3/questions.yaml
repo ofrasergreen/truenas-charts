@@ -79,3 +79,38 @@ questions:
                       schema:
                         type: hostpath
                         required: true
+        - variable: tmp
+          label: "Temporary plotting volume"
+          schema:
+            type: dict
+            attrs:
+              - variable: datasetName
+                label: "Temporary plotting volume"
+                schema:
+                  type: string
+                  hidden: true
+                  $ref:
+                    - "normalize/ixVolume"
+                  show_if: [["hostPathEnabled", "=", false]]
+                  default: "tmp"
+                  editable: false
+              - variable: mountPath
+                label: "Temporary Plot Mount Path"
+                description: "Path where the volume will be mounted inside the pod"
+                schema:
+                  type: path
+                  hidden: true
+                  editable: false
+                  default: "/plot-tmp"
+              - variable: hostPathEnabled
+                label: "Enable Custom Host Path for Chia Temporary Volume"
+                schema:
+                  type: boolean
+                  default: false
+                  show_subquestions_if: true
+                  subquestions:
+                    - variable: hostPath
+                      label: "Host Path for Chia Temporary Volume"
+                      schema:
+                        type: hostpath
+                        required: true
